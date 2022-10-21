@@ -854,11 +854,10 @@ header {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
-.modal-btn:hover, .modal-btn:focus {
+.modal-btn:hover,
+.modal-btn:focus {
   fill: var(--primary-accent-color);
 }
-
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(1.5);
@@ -885,13 +884,17 @@ header {
   width: 100%;
 
   padding-left: 42px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
- }
-
-
-.modal-input:active, .modal-input:focus-visible {
+.modal-input:active,
+.modal-input:focus-visible {
   border-color: var(--primary-accent-color);
   outline: transparent;
+}
+
+.field-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus + .field-icon {
@@ -984,9 +987,12 @@ header {
   resize: none;
 
   padding: 12px 16px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-textarea:active, .modal-textarea:focus-visible {
+.modal-textarea:focus,
+.modal-textarea:focus {
   border-color: var(--primary-accent-color);
   outline: transparent;
 }
@@ -999,38 +1005,32 @@ header {
   margin-bottom: 30px;
 }
 
-.modal-checkbox {
-  appearance: none;
-  position: absolute;
-
-  }
-
 .checkbox-text {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  fill: transparent;
 }
 
-.checkbox-icon {
+.checkbox-field {
   margin-right: 9px;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 16px;
   height: 15px;
   border: 2px solid var(--title-text-color);
   border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox-tumbr {
-  display: flex;
-  align-items:center;
-}
-
-.modal-checkbox:checked + .checkbox-icon {
+.modal-checkbox:checked + .checkbox-text .checkbox-field {
   background-color: var(--primary-accent-color);
-  background-image: url(../images/svg/icon-check.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  /* background-origin: border-box; */
+  border-color: transparent;
+  fill: var(--secondary-accent-color);
+}
+
+.modal-checkbox:focus + .checkbox-text .checkbox-field {
   border-color: var(--primary-accent-color);
- 
- 
 }
