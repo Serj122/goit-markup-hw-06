@@ -626,11 +626,8 @@ header {
   margin-bottom: 20px;
 }
 
-.subscribe-label {
+.subscribe-field {
   margin-right: 12px;
-}
-
-.subscribe-label {
   display: flex;
 }
 
@@ -661,7 +658,7 @@ header {
   margin-left: 10px;
 }
 
-.subscribe-label input {
+.subscribe-field input {
   margin: 0;
 
   width: 358px;
@@ -1003,11 +1000,13 @@ header {
 
 .modal-field.agry {
   margin-bottom: 30px;
+  /* padding-left: 12px; */
 }
 
 .checkbox-text {
   display: flex;
   align-items: center;
+  justify-content: center;
   fill: transparent;
 }
 
